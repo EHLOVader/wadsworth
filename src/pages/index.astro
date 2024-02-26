@@ -81,7 +81,7 @@
 
 </style>
 
-<script>
+<script is:inline>
 	const input = document.querySelector('.url-input input');
 	input.addEventListener('input',  (event) => {
 
@@ -100,7 +100,7 @@
 			}
 		});
 
-		function onPlayerReady(event) {
+		function onPlayerReady() {
 			const time = player.getDuration();
 			const wadsworth = Math.floor(time * .33333333);
 			window.wurl = `https://www.youtube.com/watch?v=${video_id}&t=${wadsworth}s`;
