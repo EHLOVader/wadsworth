@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.5.5",
     "astro": "^4.4.4",
+    "sass": "^1.71.1",
     "typescript": "^5.3.3",
     "util.promisify": "^1.1.2",
     "youtube-search-without-api-key": "^2.0.1"
