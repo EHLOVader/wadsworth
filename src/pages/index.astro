@@ -92,13 +92,7 @@
 		const video_id = event.target.value.split('v=')[1];
 		console.log(video_id);
 		const player = new YT.Player('player', {
-			height: '390',
-			width: '640',
 			videoId: video_id,
-			playerVars: {
-				'autoplay': 0,
-				'controls': 1
-			},
 			events: {
 				'onReady': onPlayerReady
 			}
@@ -106,7 +100,7 @@
 
 		function onPlayerReady() {
 			const time = player.getDuration();
-			const wadsworth = Math.floor(time * .33333333);
+			const wadsworth = Math.floor(time * 0.30);
 			window.wurl = `https://www.youtube.com/watch?v=${video_id}&t=${wadsworth}s`;
 			console.log(wurl);
 		}
