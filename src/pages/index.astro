@@ -19,8 +19,10 @@
 				YouTube URL:
 				<input type="url" />
 			</label>
-			<input id="copy" type="button" value="Copy">
-			<input id="open" type="button" value="Open">
+			<div class="form-actions">
+				<input id="copy" type="button" value="Copy">
+				<input id="open" type="button" value="Open">
+			</div>
 		</div>
 
 		<div id="player"></div>
@@ -46,7 +48,7 @@
 		font-size: calc(30vw*0.15);
 		margin-left: calc(10vw*0.2);
 
-		@media( max-width: 800px) {
+		@media( max-width: 830px) {
 			font-size: calc(90vw * 0.15);
 			margin-left: calc(50vw * 0.2);
 
@@ -87,6 +89,10 @@
 		margin-right: 10%;
 		background: #fff;
 
+		@media( max-width: 830px) {
+			flex-direction: column;
+		}
+
 	}
 
 	.url-input {
@@ -103,6 +109,7 @@
 			padding: 0.5em;
 			font-size: 1em;
 			border: none;
+			border-bottom: 1px solid #333;
 		}
 	}
 
@@ -115,7 +122,14 @@
 		font-size: 1.5em;
 		background: #F00;
 		color: #FFF;
+		flex: 1;
 
+	}
+
+	.form-actions {
+		display: flex;
+		justify-content: space-between;
+		padding: 12px;
 	}
 
 </style>
